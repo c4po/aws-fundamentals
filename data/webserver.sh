@@ -18,4 +18,4 @@ cat << EOF > /webroot/index.html
 <a href="https://github.com/c4po/aws-fundamentals">source code</a>
 EOF
 
-docker run -d --name awsdemo -v /webroot:/usr/share/nginx/html:ro -p 80:80 nginx
+docker run -d --name awsdemo -v /webroot:/usr/share/nginx/html:ro -p 80:80 --restart always nginx
